@@ -275,14 +275,14 @@ public class Main {
 
         for(int i = 0; i< saveTable.size(); i++)
         {
-            int num = i;
+            int num = i + 1;
             System.out.println(num +  "  " + saveTable.get(i).NonTerminal +"   " + saveTable.get(i).Terminal + "   " + saveTable.get(i).dirNum);
         }
 
         System.out.println("№" +"                  "+  "DirsSet" +"             " + "Sift"  + "           " + "DirNum"  + "              " + "Stack" + "             " +"Error" + "         " +"EndState");
         for(int i = 0; i< saveTable.size(); i++)
         {
-           int num = i;
+           int num = i + 1;
            System.out.println(num + "                   " + saveTable.get(i).Terminal + "               " + saveTable.get(i).Shift+ "                " + saveTable.get(i).dirNum
            + "             " + saveTable.get(i).stack + "                "  + saveTable.get(i).Error  + "                "+ saveTable.get(i).EndState);
         }
@@ -294,7 +294,7 @@ public class Main {
         outputwrite.write("№" +" "+  "DirsSet" +" " + "Sift"  + " " + "DirNum"  + " " + "Stack" + " " +"Error" + " " +"EndState"+ "\n");
         for(int i = 0; i< saveTable.size(); i++)
         {
-            int num = i;
+            int num = i + 1;
             String str = saveTable.get(i).Terminal;
             str = str.trim();
             str = str.replace(" ", ",");
